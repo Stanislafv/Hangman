@@ -6,7 +6,7 @@ except ValueError:
     try:
         rejim = int(input("Введите режим игры(3 - 3 буквы, 4 - 4 буквы, 5 - 5 букв)"))
     except ValueError:
-        print("ВЫ ТОЧНО ВВЕЛИ ЦИФРУ!?")
+        print("Вы ТОЧНО ввели цифру!?")
         try:
             rejim = int(input("Введите режим игры(3 - 3 буквы, 4 - 4 буквы, 5 - 5 букв)"))
         except ValueError:
@@ -28,6 +28,9 @@ if rejim == 3:
                 print("Было загадано слово:",zagadka)
                 break
             otvet = input("Введите букву:")
+            if len(otvet) != 1:
+                print("Вы точно ввели одну букву?")
+                continue
             if otvet in used:
                 print("Вы уже вводили эту букву!")
                 continue
@@ -62,6 +65,9 @@ elif rejim == 4:
                 print("Было загадано слово:",zagadka)
                 break
             otvet = input("Введите букву:")
+            if len(otvet) != 1:
+                print("Вы точно ввели одну букву?")
+                continue
             if otvet in used:
                 print("Вы уже вводили эту букву!")
                 continue
@@ -100,6 +106,9 @@ elif rejim == 5:
                 print("Было загадано слово:",zagadka)
                 break
             otvet = input("Введите букву:")
+            if len(otvet) != 1:
+                print("Вы точно ввели одну букву?")
+                continue
             if otvet in used:
                 print("Вы уже вводили эту букву!")
                 continue
